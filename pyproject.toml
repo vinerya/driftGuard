@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "driftguard"
+version = "0.1.0"
+description = "Embedding-based response drift detection for LLM agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Moudather Chelbi", email = "moudather.chelbi@gmail.com" },
+]
+keywords = [
+    "llm", "langchain", "drift", "embeddings", "guardrails",
+    "monitoring", "agents", "nlp",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "langchain-core>=0.3.0,<1.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "build",
+    "twine",
+]
+langgraph = [
+    "langgraph>=0.2",
+]
+viz = [
+    "matplotlib>=3.5",
+    "scikit-learn>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/moudather-chelbi/driftguard"
+Repository = "https://github.com/moudather-chelbi/driftguard"
+"Bug Tracker" = "https://github.com/moudather-chelbi/driftguard/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+driftguard = ["py.typed"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
