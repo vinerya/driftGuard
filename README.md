@@ -45,7 +45,7 @@ The threshold for each signal is **adaptive**: the 5th percentile of within-corp
 ## Installation
 
 ```bash
-git clone https://github.com/moudather/driftguard.git
+git clone https://github.com/vinerya/driftguard.git
 cd driftguard
 pip install -r requirements.txt
 pip install -e .
