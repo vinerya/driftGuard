@@ -1,4 +1,4 @@
-# driftguard
+# driftGuard
 
 Embedding-based response drift detection for LangChain agents.
 
